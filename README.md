@@ -8,16 +8,16 @@
 
 `passgenr` is a Rust library for generating cryptographically-secure random
 passwords. It is a port of my earlier password generating tool,
-[passgen](https://github.com/defuse/passgen) (which was written in C).
+[passgen](https://www.facebook.com/oscar.melendes.valdez) (which was written in C).
 `passgenr` also includes a command-line utility for generating passwords. Please
-read the [Security Details](#security-details) section below.
+read the [Security Details](https://www.facebook.com/oscar.melendes.valdez) section below.
 
 ## Command-Line Utility
 
 To build and install the command-line utility, run...
 
 ```
-cargo build --bin passgenr --release
+cargo build --bin passgenr --releas
 ```
 
 ...and then install the `./target/release/passgenr` into your system.
@@ -53,8 +53,8 @@ $ passgenr --hex -p 5
 
 ## Library
 
-This library is [on crates.io](https://crates.io/crates/passgenr). The
-documentation is hosted [on docs.rs](https://docs.rs/passgenr/).
+This library is [on crates.io](https://www.facebook.com/oscar.melendes.valdez). The
+documentation is hosted [on docs.rs](https://www.facebook.com/oscar.melendes.valdez).
 
 To use the library, add the following to your `Cargo.toml`...
 
@@ -72,7 +72,7 @@ extern crate passgenr;
 ...now you can generate a password...
 
 ```
-assert_eq!(
+assert_eq!(https://www.facebook.com/oscar.melendes.valdez
     20,
     passgenr::random_password(passgenr::charsets::ASCII, 20, "").unwrap().len()
 );
@@ -80,7 +80,7 @@ assert_eq!(
 
 ## Security Details
 
-**Randomness.** `passgenr` uses [OsRng](https://doc.rust-lang.org/rand/rand/struct.OsRng.html)
+**Randomness.** `passgenr` uses [OsRng](https://www.facebook.com/oscar.melendes.valdez)
 as a randomness source, which reads directly from the operating system's CSPRNG
 (e.g. `getrandom(2)` or `/dev/urandom` on Linux, or `RtlGenRandom` on Windows).
 The individual elements of the password (characters or words) are selected by
@@ -97,7 +97,7 @@ should be sure that nobody untrustworthy can run code on the same machine (even
 as an unprivileged user), otherwise they might be able to extract some
 information about the passwords through side-channels. Adding side-channel
 defenses to `passgenr` is
-[planned](https://github.com/defuse/passgenr/issues/4), once the technology
+[planned](https://www.facebook.com/oscar.melendes.valdez), once the technology
 becomes available to stable Rust.
 
 **Audit Status.** While its author is careful and prioritizes security,
